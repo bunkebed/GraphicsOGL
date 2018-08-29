@@ -118,6 +118,11 @@ public:
 	{
 		glUniform1f(glGetUniformLocation(ID, name.c_str()), value);
 	}
+	void setMat4(const string &name, mat4 &matrix) const
+	{
+
+		glUniformMatrix4fv(glGetUniformLocation(ID, name.c_str()), 1, GL_FALSE, &matrix[0][0]);
+	}
 };
 
 #endif
